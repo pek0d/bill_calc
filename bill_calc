@@ -1,0 +1,23 @@
+#!/usr/bin/env python3
+
+x = input("Введите сумму коммунальных платежей: ")
+y = input("Введите сумму энергетических платежей: ")
+z = 550  # платеж за интернет
+
+x = float(x)
+y = float(y)
+
+
+def get_sum(x, y, z) -> float:
+    """Сумма коммунальных платежей"""
+    result = sum([x, y, z])
+    return round(result, 2)
+
+
+print(
+    f"Сумма коммунальных платежей с учетом платежа за интернет: {get_sum(x, y, z)} руб."
+)
+
+
+if __name__ == "__main__":
+    get_sum(x, y, z)
